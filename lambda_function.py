@@ -14,7 +14,7 @@ def reddit():
     reddit = praw.Reddit(client_id=c_id,
                          client_secret=c_secret, password=passwd,
                          user_agent='USERAGENT', username=usrnm)
-    for submissions in reddit.subreddit('jokes').hot(limit=2):
+    for submissions in reddit.subreddit('jokes').hot(limit=20):
         return ((submissions.selftext))
 
 
